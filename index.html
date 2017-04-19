@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <link rel="stylesheet" href="build/css/vendor.css">
+  <link rel="stylesheet" href="build/css/styles.css">
+  <script src="build/js/vendor.min.js"></script>
+  <script type="text/javascript" src="build/js/app.js"></script>
+  <title>Cultural Exchange</title>
+</head>
+<body>
+  <h1>Cultural Exchange</h1>
+  <div class="container">
+    <div class="row">
+      <p>Info here</p>
+    </div>
+    <div class="row">
+      <form id="countrySearch">
+        <label for="country1Input">Current Location:</label>
+        <input type="text" name="country1Input" id="country1Input" placeholder="Home country name here..." required>
+        <label for="country2Input">Destination:</label>
+        <input type="text" name="country2Input" id="country2Input" placeholder="Destination country name here..." required>
+        <button type="submit" class="btn btn-success" name="button">Submit</button>
+      </form>
+    </div>
+    <div class="row">
+      <p><span id="infoBox"></span></p>
+    </div>
+  </div>
+</body>
+</html>
