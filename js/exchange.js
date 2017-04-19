@@ -1,8 +1,7 @@
-function getExchange(countryAbbreviation1, countryAbbreviation2) {
+function getExchange(homeCountry, destCountry) {
 
-  $.get('http://api.fixer.io/latest?base='+countryAbbreviation1+'&symbols='+countryAbbreviation1+','+countryAbbreviation2).then(function(response) {
-    let testVar = countryAbbreviation1
-    $('#infoBox').text('There are '+Object.values(response.rates)+' '+countryAbbreviation1+' to every '+countryAbbreviation2);
+  $.get('http://api.fixer.io/latest?base='+homeCountry+'&symbols='+homeCountry+','+destCountry).then(function(response) {
+    $('#infoBox').text('There are '+Object.values(response.rates)+' '+homeCountry+' to every '+destCountry);
   }).fail(function(error) {
     $('#infoBox').text('There was an error');
   });
